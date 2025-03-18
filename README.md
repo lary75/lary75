@@ -1,4 +1,4 @@
-Código para importação dos dados
+# Bloco 1 Código para importação dos dados
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,7 +16,9 @@ print("Ratings:")
 print(ratings.head())
 print("\nMovies:")
 print(movies.head())
-Limpeza dos Dados
+
+# Bloco 2 Limpeza dos Dados
+
 # Verificação de valores ausentes
 print(ratings.isnull().sum())
 print(movies.isnull().sum())
@@ -33,7 +35,9 @@ plt.title("Distribuição das Avaliações dos Filmes")
 plt.xlabel("Avaliação")
 plt.ylabel("Frequência")
 plt.show()
-Média de Avaliação por Filme
+
+# Bloco 3 Média de Avaliação por Filme
+
 # Média de avaliação por filme
 avg_rating = ratings.groupby('movieId')['rating'].mean().reset_index()
 
@@ -59,7 +63,9 @@ plt.title("Número de Avaliações vs Média das Avaliações por Filme")
 plt.xlabel("Número de Avaliações")
 plt.ylabel("Média das Avaliações")
 plt.show()
-Desenvolvimento de um Sistema de Recomendação Simples
+
+# Bloco 4 Desenvolvimento de um Sistema de Recomendação Simples
+
 # Criação da matriz usuário-filme
 user_movie_matrix = ratings.pivot(index='userId', columns='movieId', values='rating').fillna(0)
 print("Matriz usuário-filme:")
