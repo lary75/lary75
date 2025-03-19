@@ -15,7 +15,7 @@ movies = pd.read_csv('movies.csv')
 print("Ratings:")
 print(ratings.head())
 print("\nMovies:")
-print(movies.head())
+print(movies.head()
 
 # Bloco 2 Limpeza dos Dados
 
@@ -59,7 +59,6 @@ movie_stats = pd.merge(avg_rating, rating_counts, on='movieId')
 # Visualizar a relação
 plt.figure(figsize=(10,6))
 sns.scatterplot(x='rating_count', y='rating', data=movie_stats, color='green')
-plt.title("Número de Avaliações vs Média das Avaliações por Filme")
 plt.xlabel("Número de Avaliações")
 plt.ylabel("Média das Avaliações")
 plt.show()
